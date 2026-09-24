@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ja'Corey Trahan's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/afa729a7ce.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="about__me">
+    <nav>
+        <div class="nav__container">    
+                    <figure>            
+                    <img src="./assets/jt-logoborder3shadow.png" alt="" class="logo logo--light">
+                    <img src="./assets/jtlogodark.png" alt="" class="logo logo--dark">   
+                    </figure>  
+            <ul class="nav__links">
+                <li class="nav__list">
+                    <a href="#about__me">About</a>
+                </li>
+                <li class="nav__list">
+                    <a href="#languages">Languages</a>
+                </li>
+                <li class="nav__list">
+                    <a href="#projects">Projects</a>
+                </li>
+                <li class="nav__list link__primary">
+                    <a href="">Contact</a>
+                </li>
+                <li class="dark__mode" >
+                    <button class="dark__mode--toggle" onclick="toggleDarkMode()">
+                        <img src="assets/Galacticmodebuttondrop.png" alt="Toggle Galactic Mode" class="dark__mode--button">                        
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="aboutme__info row">
+        <div class="aboutme__info--container">
+            <div class="profile__pic--container">
+            <figure class="aboutme__picture--mask">
+                <img src="assets/profile-photo.jpg" alt="" class="profile__picture">
+            </figure>
+            <div class="quote__container">
+            <p class="quote lightquote">-"Excellent preparations make for excellent results"</p>
+            <p class="quote darkquote">-"Before you roar, take a deep breath."</p>
+            </div>
+        </div>
+            <h1 class="aboutme__info--title">Hello! My name is <span class="gold"> Ja'Corey Trahan</span>, You can call me <span class="gold">Jack!</span><span class="star">⭐</span></h1>
+            <p class="aboutme__info--para">I'm a <span class="gold">Frontend Engineer</span> with a passion for <span class="gold">problem solving</span>, an eye for <span class="gold">detail</span> and a nagging penchant for <span class="gold">perfection</span>.</p>
+        </div>
+        </div>
+    </section>
+    <section id="languages">
+        <div class="container">
+        <div class="row">
+            <h1 class="section__title">
+                Here's my <span class="gold">Technology</span> Stack
+            </h1>
+            <p class="languages__para">
+                A list of <span class="gold"> Tech languages</span> I'm familiar with
+            </p>
+            <div class="language__list">
+                <div class="language">
+                    <figure class="language__img--wrapper">
+                        <img src="./assets/HTML5logo.png" class="language__img">
+                        </figure>
+                        <span class="language__name">HTML</span>
+                </div>  
+                <div class="language">
+                    <figure class="language__img--wrapper">
+                        <img src="./assets/logo-css-3-1536.webp" alt="" class="language__img">
+                        </figure>
+                        <span class="language__name">CSS</span>
+                </div>                         
+                <div class="language">
+                    <figure class="language__img--wrapper">
+                        <img src="./assets/javascript-1-225993.webp" alt="" class="language__img">
+                        </figure>
+                        <span class="language__name">Javascript</span>
+                </div>               
+                <div class="language">
+                    <figure class="language__img--wrapper">
+                        <img src="./assets/react-3-1175109.webp" alt="" class="language__img">
+                        </figure>
+                        <span class="language__name">React</span>
+                </div>                                   
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+                <h1 class="section__title">
+                    Let's take a look at some of my <span class="gold">Projects</span>
+                </h1>
+                <ul class="projects__list">
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/famulus-page.jpeg" alt="" class="project__img">
+                            <div class="project__description">
+                                <a href="https://galacticjack1.github.io/Famulus-Project/" target="_blank"><h3 class="project__description--title">
+                                    Famulus
+                                </h3></a>
+                                <h4 class="project__description--sub-title">
+                                    Html, CSS, Javascript
+                                </h4>
+                                <p class="project__description--para">
+                                    Famulus is a DND 5E spell resource project I made in my spare time for my homegames
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+    <div class="row footer__row">
+        <a href="#" class="footer__anchor">
+            <figure class="footer__logo">
+                <figure>            
+                    <img src="./assets/jt-logoborder3shadow.png" alt="" class="logo__footer--light">
+                    <img src="./assets/jtlogodark.png" alt="" class="logo__footer--dark">   
+                    </figure>  
+            </figure>
+        </a>
+        <div class ="footer__social--list">
+            <a href="" class="footer__link" target="_blank">Github</a>
+            <a href="" class="footer__link" target="_blank">LinkedIn</a>
+            <a href="" class="footer__link" target="_blank">Email</a>
+            <a href="" class="footer__link" target="_blank">Resume</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

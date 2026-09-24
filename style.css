@@ -1,0 +1,528 @@
+
+
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    
+}
+
+li {
+    list-style: none;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.link__primary {
+    background-color: #dfac24;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    transition: 300ms;
+    box-shadow: black  3px 3px 6px;
+}
+
+.link__primary:hover {
+    background-color: #ffda1c;
+    transition: 200ms ease;
+    color: white;
+}
+
+.link__primary:active {
+    transform: scale(.95);
+    display: inline-block;
+    transform-origin: center center;
+    transition: 200ms ease;
+    color: white;
+}
+
+
+.row {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0px 12px;
+}
+
+.quote__container {
+    position: relative;
+    width: 400px;
+    height: 50px;
+}
+
+.quote {
+   font-style: oblique 50deg;
+    font-weight: 400;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: opacity 2s ease, color 2s ease;
+    
+}
+
+.lightquote {
+opacity: 1;
+}
+
+.darkquote {
+ opacity: 0;
+ color: white;
+}
+
+.dark-mode .lightquote {
+opacity: 0;
+}
+
+.dark-mode .darkquote {
+    opacity: 1;
+    }
+
+
+.gold {
+    color: #dfac24;
+    font-weight: bolder;
+}
+
+.star {
+display: inline-block;
+animation: spin 7s linear infinite;
+padding-left: 8px;
+}
+
+@keyframes spin {
+from {
+    transform: rotate(0deg);
+}
+to {
+    transform: rotate(360deg);
+}
+}
+
+section:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+section {
+    position: relative;
+    z-index: 1;
+}
+
+section,
+.nav__container {
+    transition: background-color 50ms ease;
+}
+
+footer {
+    background-color: #242424;
+    position: relative;
+    z-index: 1;
+}
+
+.dark-mode footer {
+    background-color: transparent;
+}
+
+/* Dark Mode */
+
+.dark__mode--toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("./assets/spacebackdrop.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 2s ease;
+    z-index: 0;
+    pointer-events: none;
+}
+
+body.dark-mode::before {
+    opacity: 1;
+}
+
+
+.dark-mode section {
+    background-color: transparent;
+}
+
+.dark-mode .nav__container {
+    background-color: transparent;
+}
+
+.dark-mode .aboutme__info--title,
+.dark-mode .aboutme__info--para,
+.dark-mode .section__title,
+.dark-mode .header__para,
+.dark-mode .languages__para,
+.dark-mode .nav__list a,
+.dark-mode .language__name,
+ .dark-mode .footer__link {
+    color: white;
+}
+
+.aboutme__info--title,
+.aboutme__info--para,
+.section__title,
+.languages__para,
+.nav__list a,
+.language__name {
+    transition: color 1s ease;
+}
+
+
+.dark-mode .dark__mode--button {
+    filter: invert(1);
+    transform: scaleX(-1);
+    transition: 300ms ease;
+}
+
+.logo--dark {
+    opacity: 0;
+    }
+
+.logo--light {
+    opacity: 1;
+}
+
+.dark-mode .logo--light {
+    opacity: 0;
+}
+
+.dark-mode .logo--dark {
+    opacity: 1;
+}
+
+
+/*NAV*/
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100px;
+    padding: 0 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    
+}
+
+.logo {
+height: 14vh;
+width: 14vh;
+position: absolute;
+top: 0;
+left: 0;
+transition: opacity 2s ease;
+}
+
+.dark__mode--button {
+    height: 4vw;
+    width: 4vw;
+    transition: 300ms ease;
+}
+
+.nav__links {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 12px;
+    gap: 20px;
+    align-items: center;
+    font-weight: bold;
+    }
+
+.nav__links:hover {
+    color: #dfac24;
+    transition: 200ms ease;
+}
+
+.nav__links:active {
+    color: #ffda1c;
+
+}
+
+nav figure {
+    position: relative;
+    width: 14vh;
+    height: 14vh;
+}
+
+/*About me */
+
+.profile__picture {
+    width: 10vw;
+    height: 10vw;
+    box-shadow:  0px 8px 16px;
+    border-radius: 50%;   
+}
+
+.aboutme__info--container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.profile__pic--container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 36px;
+}
+
+.aboutme__info--title {
+    margin-bottom: 18px;
+    line-height: 1.2;
+}
+
+
+
+.aboutme__info--para {
+    font-weight: 450;
+}
+    
+/* LANGUAGES */
+
+.container {
+    padding: 0 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+
+.section__title {
+  text-align: center;
+
+}
+
+.languages__para {
+    text-align: center;
+    font-weight: 450;
+}
+
+.language__img {
+    width: 100%;
+    max-width: 100px;
+    transition: all 300ms ease;
+}
+
+.language__img:hover .language__img {
+    filter: brightness(80%);
+    opacity: 0.86;
+    transform: scale(0.9);
+}
+
+.language {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.language__img--wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 16px;
+}
+
+.language__list {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.language__name {
+    position: absolute;
+    bottom: 0;
+    transform: scale(0);
+    transition: all 300ms;
+    font-size: 20px;
+    opacity: 0;
+    font-weight: bolder;
+}
+
+.language:hover .language__name {
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+/* PROJECTS */
+
+.project__list {
+    padding-top: 40px;
+}
+
+.project__img {
+    width: 100%;
+    transition: all 500ms ease;
+}
+
+.project__wrapper {
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.45);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+}
+
+.project__wrapper:before {
+    content: "";
+    position: absolute;
+    top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background-color: #1c1d25;
+   opacity: 0;
+   transition: opacity 450ms ease;
+   z-index: 2;
+}
+
+.project:hover .project__wrapper:before {
+    opacity: 0.7;
+}
+
+.project:hover .project__img {
+    transform: scale(1.07);
+    filter: blur(5px);
+}
+
+.project:hover .project__description {    
+    opacity: 1;
+    transform: translateY(-50%);
+}
+
+.project__description {
+position: absolute;
+top: 50%;
+left: 90px;
+transform: translateY(100%);
+max-width: 550px;
+z-index: 3;
+opacity: 0;
+transition: transform 450ms, opacity 300ms;
+}
+
+.project__description--title {
+    font-size: 40px;
+}
+
+.project__description--para {
+margin: 16px 0;
+}
+
+.project__description--link {
+    font-size: 20px;
+    margin-right: 16px;
+}
+
+.project__description--title,
+.project__description--sub-title,
+.project__description--para,
+.project__description--link {
+    text-align: left;
+    color: #fff;
+}
+
+/*FOOTER*/
+
+footer {
+    background-color: #242424;    
+}
+
+
+.footer__social--list {
+    margin-bottom: 28px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3% 0;
+}
+
+.footer__logo {
+      position: relative;
+      width: 100px;
+      height: 100px;
+}
+
+.logo__footer--light {
+    height: 10vh;
+    width: 10vh;
+    transition: opacity 2s ease;  
+    opacity: 1;
+    margin-bottom: 16px;
+    align-items: center;
+    margin: 0 auto;
+    position: absolute;
+    
+    
+}
+
+.logo__footer--dark {
+    height: 10vh;
+    width: 10vh;  
+    transition: opacity 2s ease;
+    opacity: 0;
+    margin-bottom: 16px;
+    align-items: center;
+    margin: 0 auto;
+    position: absolute;
+   }
+
+.dark-mode .logo__footer--light {
+    opacity: 0;
+}
+
+.dark-mode .logo__footer--dark {
+    opacity: 1;
+}
+
+.footer__link {
+    color: white;
+}
+
+
