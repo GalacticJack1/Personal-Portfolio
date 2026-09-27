@@ -23,6 +23,7 @@ a {
     text-decoration: none;
 }
 
+
 .link__primary {
     background-color: #dfac24;
     color: white;
@@ -121,18 +122,18 @@ body {
 
 section {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 section,
 .nav__container {
-    transition: background-color 50ms ease;
+    transition: background-color 1s ease;
 }
 
 footer {
     background-color: #242424;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .dark-mode footer {
@@ -217,6 +218,16 @@ body.dark-mode::before {
     opacity: 1;
 }
 
+.dark-mode section {
+    pointer-events: none;
+}
+
+.dark-mode section a,
+.dark-mode section button,
+.dark-mode .language,
+.dark-mode .project {
+    pointer-events: auto;
+}
 
 /*NAV*/
 
@@ -277,6 +288,13 @@ nav figure {
     height: 14vh;
 }
 
+.contact__button {
+    border: none;
+    cursor: pointer;
+    font-size: inherit;
+
+}
+
 /*About me */
 
 .profile__picture {
@@ -302,7 +320,7 @@ nav figure {
 }
 
 .aboutme__info--title {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     line-height: 1.2;
 }
 
@@ -324,6 +342,7 @@ nav figure {
 
 .section__title {
   text-align: center;
+  padding-bottom: 16px;
 
 }
 
@@ -460,6 +479,7 @@ margin: 16px 0;
     color: #fff;
 }
 
+
 /*FOOTER*/
 
 footer {
@@ -525,4 +545,384 @@ footer {
     color: white;
 }
 
+.toparrow {
+    position: absolute;
+    color: white;
+    align-items: center;
+    margin: 0 auto;
+    opacity: 0;
+    width: 76px;
+      height: 76px;
+     
+      
+}
+
+.toparrow:hover {
+    transform: translateX(50px);
+    opacity: 1;
+    transition: ease 300ms;
+}
+
+.fa-arrow-up {
+     height: 20px;
+    width: 20px;
+    transform: translateY(30px) translateX(30px);
+
+}
+
+/* MODAL */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 300ms ease, visibility 300ms ease;
+
+}
+
+.modal__container {
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 16px;
+    text-align: left;
+    box-shadow: black  3px 3px 6px;
+}
+
+.dark-mode .modal__container {
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    padding: 40px;
+    background-color: #242424;
+    border-radius: 16px;
+    text-align: left;
+    color: white;
+    box-shadow: white  3px 3px 6px;
+}
+
+.modal__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.dark-mode .modal__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.modal--open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__title {
+
+}
+
+.modal__para {
+
+}
+
+/* STARS */
+
+/* Entire star layer */
+
+
+.stars {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 2s ease, visibility 2s ease;
+    pointer-events: none;
+}
+ 
+
+.dark-mode .stars {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Individual star wrapper */
+.star__wrapper {
+    pointer-events: auto;
+   transition: transform 300ms ease-out;
+}
+
+
+.star__wrapper:hover {
+    transform: scale(2);
+}
+
+
+
+.star__hover--effect {
+    width: 100%;
+    height: 100%;
+}
+
+
+.star__wrapper:hover .star__hover--effect {
+    animation: star-spin 7s linear infinite;
+}
+
+@keyframes star-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* STAR COLUMN 1 */
+
+.bg-star-1 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 160px;
+    left: 20px;
+}
+.bg-star-2 {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 320px;
+    left: 140px;
+}
+.bg-star-3 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 240px;
+    left: 20px;
+}
+.bg-star-3-5 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 280px;
+    left: 240px;   
+}
+.bg-star-4 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: 120px;
+    left: 200px;
+}
+.bg-star-5 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: 80px;
+    left: 20px;
+
+/* STAR COLUMN 2 */
+}
+.bg-star-6 {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 80px;
+    left: 324px;
+}
+.bg-star-7 {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 200px;
+    left: 400px;
+}
+.bg-star-8 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 340px;
+    left: 300px;
+}
+.bg-star-9 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 260px;
+    left: 460px;   
+}
+.bg-star-10 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: 120px;
+    left: 550px;
+}
+.bg-star-11 {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 36px;
+    left: 330px;
+}
+/* STAR COLUMN 3 */
+
+.bg-star-12 {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 80px;
+    left: 700px;
+}
+.bg-star-13 {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 255px;
+    left: 775px;
+}
+.bg-star-14 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 385px;
+    left: 880px;
+}
+.bg-star-15 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: 260px;
+    left: 675px;   
+}
+.bg-star-16 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: 160px;
+    left: 775px;
+}
+.bg-star-17 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: 16px;
+    left: 730px;
+}
+/* STAR COLUMN 4 */
+
+.bg-star-18 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 128px;
+    right: 550px;
+}
+.bg-star-19 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 220px;
+    right: 450px;
+}
+.bg-star-20 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 340px;
+    right: 300px;
+}
+.bg-star-21 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 260px;
+    right: 500px;   
+}
+.bg-star-22 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: 160px;
+    right: 350px;
+}
+.bg-star-23 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: 16px;
+    right: 550px;
+}
+/* STAR COLUMN 5 */
+
+.bg-star-24 {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 128px;
+    right: 200px;
+}
+.bg-star-25 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 240px;
+    right: 40px;
+}
+.bg-star-26 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 425px;
+    right: 225px;
+}
+.bg-star-27 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 230px;
+    right: 120px;   
+}
+.bg-star-28 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: 80px;
+    right: 250px;
+}
+.bg-star-29 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: 60px;
+    right: 80px;
+}
 

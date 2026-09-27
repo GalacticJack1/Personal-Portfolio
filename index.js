@@ -11,3 +11,9 @@ function toggleDarkMode() {
 
 }
 
+function toggleModal() {
+    const modal = document.querySelector(".modal");
+
+    modal.classList.toggle("modal--open");
+
+}
