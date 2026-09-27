@@ -593,7 +593,7 @@ footer {
     position: relative;
     width: 90%;
     max-width: 600px;
-    padding: 20px;
+    padding: 15px;
     background-color: white;
     border-radius: 16px;
     text-align: left;
@@ -674,7 +674,7 @@ padding-bottom: 16px;
 
 .modal__para {
     font-size: 15px;
-padding-bottom: 32px;
+padding-bottom: 16px;
 }
 
 .fa-envelope {
@@ -701,6 +701,15 @@ padding-bottom: 16px;
 }
 
 .call__me {
+padding-bottom: 16px;
+}
+
+.fa-clipboard {
+font-size: 20px;
+padding-right: 8px;
+}
+
+.resume__me {
 
 }
 
@@ -711,7 +720,9 @@ padding-bottom: 16px;
 .dark-mode .email__me,
 .dark-mode .github__me,
 .dark-mode .call__me, 
-.darkmode a {
+.darkmode a,
+.dark-mode .fa-clipboard,
+.dark-mode, .resume__me, {
     color: white
 }
 
