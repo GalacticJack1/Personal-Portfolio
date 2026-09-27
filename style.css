@@ -592,12 +592,16 @@ footer {
 .modal__container {
     position: relative;
     width: 90%;
-    max-width: 500px;
-    padding: 40px;
+    max-width: 600px;
+    padding: 20px;
     background-color: white;
     border-radius: 16px;
     text-align: left;
     box-shadow: black  3px 3px 6px;
+    height:90%;
+    max-height: 300px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .dark-mode .modal__container {
@@ -610,6 +614,26 @@ footer {
     text-align: left;
     color: white;
     box-shadow: white  3px 3px 6px;
+}
+
+.modal__right {
+width: 40%;
+align-items: center;
+justify-content: center;
+align-items: center;
+display: flex;
+}
+
+.modal__left {
+width: 60%;
+display: flex;
+text-align: left;
+flex-direction: column;
+}
+
+.modal__logo {
+    height: 150px;
+    width: 150px;
 }
 
 .modal__close {
@@ -639,12 +663,58 @@ footer {
 }
 
 .modal__title {
+text-decoration: underline;
+font-weight: bolder;
 
+}
+
+.modal__sub--title {
+padding-bottom: 16px;
 }
 
 .modal__para {
+    font-size: 15px;
+padding-bottom: 32px;
+}
+
+.fa-envelope {
+font-size: 20px;
+padding-right: 8px;
+}
+
+.fa-github {
+font-size: 20px;
+padding-right: 8px;
+}
+
+.fa-phone {
+font-size: 20px;
+padding-right: 8px;
+}
+
+.email__me {
+padding-bottom: 16px;
+}
+
+.github__me {
+padding-bottom: 16px;
+}
+
+.call__me {
 
 }
+
+.dark-mode .modal__para,
+.dark-mode .fa-envelope,
+.dark-mode .fa-github,
+.dark-mode .fa-phone,
+.dark-mode .email__me,
+.dark-mode .github__me,
+.dark-mode .call__me, 
+.darkmode a {
+    color: white
+}
+
 
 /* STARS */
 
